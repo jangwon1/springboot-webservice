@@ -1,19 +1,19 @@
 language: java
-jdk:
+jdk: 
     - openjdk8
 branches:
     only:
-        -master
-        
+        - master
+     
 cache:
     directories:
         - '$HOME/.m2/repository'
         - '$HOME/.gradle'
 before_install:
-    -chmod +x ./gradlew
+    - chmod +x ./gradlew 
 script: "./gradlew clean build"
 
 notification:
     email:
-        recipient:
+        recipients:
             - sbtm1251@gmail.com
